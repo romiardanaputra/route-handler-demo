@@ -43,7 +43,6 @@ export async function PATCH(request: Request, { params }: Comment) {
   return Response.json(comments[index]);
 }
 
-
 export async function DELETE(request: Request, { params }: Comment) {
   const CommentId = comments.findIndex(
     (comment) => comment.id === parseInt(params.id)
