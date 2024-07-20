@@ -43,13 +43,6 @@ export async function PATCH(request: Request, { params }: Comment) {
   return Response.json(comments[index]);
 }
 
-/**
- * Function to handle DELETE requests for deleting a comment.
- *
- * @param {Request} request - The request object containing the comment data.
- * @param {Comment} params - The parameters object containing the comment ID.
- * @return {Response} The response object with the deleted comment message and updated comments list.
- */
 export async function DELETE(request: Request, { params }: Comment) {
   const CommentId = comments.findIndex(
     (comment) => comment.id === parseInt(params.id)
